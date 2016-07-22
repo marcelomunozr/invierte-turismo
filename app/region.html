@@ -47,7 +47,8 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#">Sobre Invierte Turismo</a></li>
-              <li class="filter filter-open"><a>Filtrar Búsqueda</a></li>
+              <li class="filter filter-open hidden-xs"><a>Filtrar Búsqueda</a></li>
+              <li class="filter filter-go hidden visible-xs"><a href="#filter">Filtrar Búsqueda</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -55,8 +56,50 @@
     </header>
 
     <section class="single">
-      <!-- FILTER -->
-      <div class="control-filter">
+
+      <div id="map"></div>
+      <div class="descripcion-region">
+        <div class="text-center">
+          <h2>Región de Los Lagos</h2>
+          <p>Un lugar mágico de sabias tradiciones, donde el ecosistema vivo crece y se desarrolla a su ritmo natural.</p>
+        </div>
+        <div class="line-area">
+          <h6><span class="ico-habitantes"></span>841.123 hab</h6>
+          <h6><span class="ico-superficie"></span>48 583,6 km²</h6>
+          <h6><span class="ico-distancia"></span>255 km de Santiago</h6>
+        </div>
+        <div class="text-center">
+          <h5>Sobre la Zona</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitam fringilla arcu eget nisi scelerisque hendreri ras vel leo at neq</p>
+        </div>
+
+        <div id="carousel-region" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-region" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-region" data-slide-to="1"></li>
+            <li data-target="#carousel-region" data-slide-to="2"></li>
+            <li data-target="#carousel-region" data-slide-to="3"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img src="images/categoria-slide1.jpg" alt="Title">
+            </div>
+            <div class="item">
+              <img src="images/categoria-slide2.jpg" alt="Title">
+            </div>
+            <div class="item">
+              <img src="images/categoria-slide1.jpg" alt="Title">
+            </div>
+            <div class="item">
+              <img src="images/categoria-slide2.jpg" alt="Title">
+            </div>
+          </div>
+        </div>
+      </div><!-- FILTER -->
+      <div class="control-filter" id="filter">
         <div class="head-filter">
           <div class="form-inline">
             <div class="form-group">
@@ -82,22 +125,38 @@
             <div class="form-group">
               <select class="form-control">
                 <option selected disabled>Monto de Inversión</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option>MUS$300</option>
+                <option>MUS$2.000 a MUS$5.000</option>
+                <option>MUS$2.000 a MUS$5.000</option>
+                <option>MUS$2.000 a MUS$5.000</option>
+                <option>MUS$2.000 a MUS$5.000</option>
               </select>
             </div>
             <div class="form-group">
               <select class="form-control">
                 <option selected disabled>Tipo de Proyecto</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option>Hotel</option>
+                <option>Servicios Gastronómicos</option>
+                <option>Cabañas</option>
+                <option>Hostal</option>
+                <option>Camping</option>
+                <option>Camping Casa Rodante</option>
+                <option>Actividades Recreativas</option>
+                <option>Domos</option>
+                <option>Hotel De Nicho</option>
+                <option>Lodge</option>
+                <option>Termas</option>
+                <option>Spa</option>
+                <option>Centro Invernal</option>
+                <option>Hotel Boutique</option>
+                <option>Hostería</option>
+                <option>Ecocamp</option>
+                <option>Yurts</option>
+                <option>Refugio</option>
+                <option>Pesca</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-default">ir</button>
+            <button type="submit" class="btn btn-default">ir <span class="glyphicon glyphicon-menu-right"></span></button>
           </div>
         </div>
         <div class="body-filter">
@@ -202,49 +261,7 @@
             </li>
           </ul>
         </div>
-      </div>
-      <div id="map"></div>
-      <div class="descripcion-region">
-        <div class="text-center">
-          <h2>Región de Los Lagos</h2>
-          <p>Un lugar mágico de sabias tradiciones, donde el ecosistema vivo crece y se desarrolla a su ritmo natural.</p>
-        </div>
-        <div class="line-area">
-          <h6><span class="ico-habitantes"></span>841.123 hab</h6>
-          <h6><span class="ico-superficie"></span>48 583,6 km²</h6>
-          <h6><span class="ico-distancia"></span>255 km de Santiago</h6>
-        </div>
-        <div class="text-center">
-          <h5>Sobre la Zona</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitam fringilla arcu eget nisi scelerisque hendreri ras vel leo at neq</p>
-        </div>
-
-        <div id="carousel-region" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-region" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-region" data-slide-to="1"></li>
-            <li data-target="#carousel-region" data-slide-to="2"></li>
-            <li data-target="#carousel-region" data-slide-to="3"></li>
-          </ol>
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <img src="images/categoria-slide1.jpg" alt="Title">
-            </div>
-            <div class="item">
-              <img src="images/categoria-slide2.jpg" alt="Title">
-            </div>
-            <div class="item">
-              <img src="images/categoria-slide1.jpg" alt="Title">
-            </div>
-            <div class="item">
-              <img src="images/categoria-slide2.jpg" alt="Title">
-            </div>
-          </div>
-        </div>
-      </div>
+      </div><!-- .control-filter -->
     </section>
 
     <footer>
@@ -255,8 +272,9 @@
           </div>
           <div class="col-sm-5">
             <ul class="footer-list">
-              <li><span class="ico-twit"></span><a href="#">@investchile</a> / <a href="#">@subturismo</a></li>
-              <li><span class="ico-face"></span><a href="#">MinisteriodeEconomia</a> / <a href="#">ministeriobbnn</a></li>
+              <li><span class="ico-twit"></span><a href="#">@investchile</a></li>
+              <li><span class="ico-twit"></span><a href="#">@subturismo</a></li>
+              <li><span class="ico-travel-chile"></span><a href="#">ir a <strong>chile.travel</strong></a></li>
             </ul>
           </div>
         </div>
@@ -479,6 +497,7 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <script src="scripts/jquery.easing.min.js"></script>
 
     <!-- build:js scripts/plugins.js -->
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>

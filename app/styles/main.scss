@@ -76,6 +76,7 @@ $blue1: #05668d;
 $gray0: #eff0f3;
 $gray1: #f4f4f4;
 $gray3: #ebe7e7;
+$gray4: #ededed;
 $purple0: #71778b;
 $purple1: #614776;
 $white: #ffffff;
@@ -244,7 +245,7 @@ header{
 section{
   height: auto;
   top: 105px;
-  bottom: 126px;
+  bottom: 86px;
   position: absolute;
   z-index: 99;
   overflow: hidden;
@@ -386,7 +387,7 @@ section{
       padding: 15px 15px;
       .form-inline{
         .form-group:nth-child(1){
-          max-width: 32%;
+          max-width: 31%;
         }
         .form-group:nth-child(2){
           max-width: 29%;
@@ -403,6 +404,7 @@ section{
           font-family: $normal;
           max-width: 100%;
           width: 100%;
+          padding: 6px;
         }
         .btn-default{
           box-shadow: none;
@@ -411,8 +413,11 @@ section{
           color: $purple0;
           font-family: $normal;
           width: 7%;
+          span{
+            display: none;
+          }
           &:hover{
-            background: $blue1;
+            background: $purple1;
             color: $white;
           }
         }
@@ -465,7 +470,7 @@ section{
     padding-top: 0;
     position: absolute;
     top: 105px;
-    bottom: 126px;
+    bottom: 86px;
     min-height: inherit;
     width: 100%;
     #map {
@@ -544,6 +549,109 @@ section{
       padding: 15px;
       overflow-y: scroll;
       border-top: 5px solid $purple1;
+      h2{
+        margin: 0;
+        color: $purple1;
+        font-size: 22px;
+        font-family: $semi;
+      }
+      h1{
+        margin: 0;
+        font-size: 33px;
+        color: $blue0;
+        font-family: $normal;
+      }
+      h3{
+        margin: 4px 0 0 0;
+        font-size: 18px;
+        color: $blue0;
+        font-family: $normal;
+      }
+      .oportunidad{
+        margin: 20px 0;
+        background: $gray4;
+        padding: 10px;
+        border-radius: 5px;
+        h6{
+          margin: 0;
+          font-size: 14px;
+          font-family: $normal;
+          display: flex;
+          align-items: center;
+          color: $blue0;
+          span{
+            margin-right: 6px;
+            position: relative;
+          }
+        }
+        ul{
+          li{
+            margin: 0;
+            font-size: 14px;
+            font-family: $normal;
+            color: $blue0;
+          }
+        }
+      }
+      h6{
+        font-family: $bold;
+        font-size: 15px;
+      }
+      .antecedentes{
+        margin-bottom: 20px;
+      }
+      .lista{
+        margin: 15px 0 0 ;
+        padding-left: 50px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        min-height: 46px;
+        span{
+          position: absolute;
+          left: 0;
+        }
+        p{
+          margin-bottom: 0;
+        }
+        &:last-child{
+          padding-left: 0;
+          span{
+            display: inline-block;
+            position: relative;
+            left: 0;
+            margin-right: 6px;
+          }
+          p{
+            position: relative;
+            top: 4px;
+          }
+        }
+      }
+      .inversion-estimada{
+        border-radius: 6px;
+        background: $purple1;
+        padding: 15px;
+        text-align: center;
+        color: $white;
+        font-size: 13px;
+        font-family: $normal;
+        display: inline-block;
+        float: right;
+        span{
+          margin-left: 5px;
+        }
+      }
+      .scroll-gallery{
+        padding: 0 15px;
+        max-height: 400px;
+        overflow-y: scroll;
+        figure{
+          max-height: 150px;
+          overflow: hidden;
+          margin-bottom: 10px;
+        }
+      }
     }
   }
 }
@@ -736,12 +844,22 @@ footer{
   bottom: 0;
   width: 100%;
   background: $gray0;
-  padding: 20px 0;
+  padding: 10px 0;
   z-index: 100;
+  .footer-logos{
+    zoom: .75;
+  }
   .footer-list{
     list-style: none;
     font-family: $gob1;
     text-align: right;
+    margin-top: 10px;
+    &:before,
+    &:after{
+      display: block;
+      content: "";
+      clear: both;
+    }
     li{
       color: $blue0;
       font-size: 16px;
@@ -749,6 +867,11 @@ footer{
       display: flex;
       align-items: center;
       margin: 6px 0;
+      float: left;
+      margin-right: 10px;
+      &:last-child{
+        margin-right: 0;
+      }
       span{
         position: relative;
       }
@@ -829,6 +952,13 @@ footer{
   background: url(../images/ico-twit.png) no-repeat;
   background-size: 100%;
 }
+.ico-travel-chile{
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background: url(../images/ico-travel-chile.png) no-repeat;
+  background-size: 100%;
+}
 .ico-habitantes{
   width: 30px;
   height: 24px;
@@ -853,6 +983,97 @@ footer{
   float: none;
   position: relative;
 }
+/*INTERIOR ICOS*/
+.ico-oportunidad{
+  width: 21px;
+  height: 31px;
+  background: url(../images/ico-oportunidad.png) no-repeat;
+  display: inline-block;
+  float: none;
+  position: relative;
+  zoom: .9;
+}
+.ico-ubicacion{
+  width: 31px;
+  height: 40px;
+  background: url(../images/ico-ubicacion.png) no-repeat;
+  display: inline-block;
+  float: none;
+  position: relative;
+  zoom: .9;
+}
+.ico-atractivos{
+  width: 44px;
+  height: 28px;
+  background: url(../images/ico-atractivos.png) no-repeat;
+  display: inline-block;
+  float: none;
+  position: relative;
+  zoom: .9;
+}
+.ico-superficie2{
+  width: 40px;
+  height: 44px;
+  background: url(../images/ico-superficie2.png) no-repeat;
+  display: inline-block;
+  float: none;
+  position: relative;
+  zoom: .9;
+}
+.ico-modalidad{
+  width: 31px;
+  height: 35px;
+  background: url(../images/ico-modalidad.png) no-repeat;
+  display: inline-block;
+  float: none;
+  position: relative;
+  zoom: .9;
+}
+.ico-estadisticas{
+  width: 36px;
+  height: 34px;
+  background: url(../images/ico-estadisticas.png) no-repeat;
+  display: inline-block;
+  float: none;
+  position: relative;
+  zoom: .9;
+}
+.ico-valor-agregado{
+  width: 41px;
+  height: 41px;
+  background: url(../images/ico-valor-agregado.png) no-repeat;
+  display: inline-block;
+  float: none;
+  position: relative;
+  zoom: .9;
+}
+.ico-acceso1{
+  width: 27px;
+  height: 21px;
+  background: url(../images/ico-acceso1.png) no-repeat;
+  display: inline-block;
+  float: none;
+  position: relative;
+  zoom: .9;
+}
+.ico-acceso2{
+  width: 25px;
+  height: 26px;
+  background: url(../images/ico-acceso2.png) no-repeat;
+  display: inline-block;
+  float: none;
+  position: relative;
+  zoom: .9;
+}
+.ico-acceso3{
+  width: 22px;
+  height: 24px;
+  background: url(../images/ico-acceso3.png) no-repeat;
+  display: inline-block;
+  float: none;
+  position: relative;
+  zoom: .9;
+}
 
 
 /* Responsive: Portrait tablets and up */
@@ -869,6 +1090,7 @@ footer{
 }
 @media screen and (max-width: 1400px) {
   section{
+    bottom: 76px;
     &.home{
       .contenedor{
         .textos{
@@ -909,6 +1131,7 @@ footer{
       }
     }
     &.single{
+      bottom: 76px;
       .descripcion-region{
         padding: 15px;
         h2{
@@ -934,29 +1157,18 @@ footer{
       }
 
       .descripcion-oportunidad{
-        padding: 15px;
-        h2{
-          font-size: 20px;
-          margin-top: 10px;
-        }
-        p{
-          font-size: 14px;
-          line-height: 16px;
-        }
-        .line-area{
-          padding: 7px;
-          h6{
-            font-size: 15px;
-            span{
-              zoom: .8;
-            }
+        top: 15px;
+        .scroll-gallery{
+          figure{
+            max-height: 100px;
           }
-        }
-        h5{
-          font-size: 19px;
         }
       }
     }
+  }
+  .footer-logos{
+    width: 300px;
+    height: 64px;
   }
   .invierte-turismo-home{
     zoom: .8;
@@ -989,9 +1201,213 @@ footer{
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
+  .hidden-xs{
+    display: none!important;
+  }
+  .visible-xs{
+    display: block!important;
+  }
+  .logo{
+    /*transform: scale(.7);*/
+    zoom: .7;
+  }
+  header{
+    .navbar-default{
+      .navbar-nav{
+        margin-top: 18px;
+        margin: 0;
+        padding-top: 10px;
+        li{
+          margin: 0;
+          a{
+            text-align: center;
+            padding: 3px 0;
+          }
+        }
+      }
+    }
+  }
+  .navbar-toggle{
+    margin-top: 13px;
+  }
+  section{
+    top: 90px;
+    bottom: 0;
+    overflow: auto;
+    .control-filter{
+      width: 100%;
+      left: 0;
+      position: relative;
+      .head-filter{
+        .form-inline{
+          .form-group{
+            float: left;
+            display: block;
+            width: 32%;
+            &:nth-child(1){
+              max-width: 32%;
+            }
+            &:nth-child(2){
+              max-width: 32%;
+            }
+            &:nth-child(3){
+              max-width: 32%;
+            }
+          }
+        }
+      }
+      .body-filter{
+        max-height: inherit;
+        overflow: auto;
+        width: 100%;
+        .answers-list{
+          .col-xs-8{
+            padding-left: 0;
+            padding-right: 20px;
+          }
+          h2{
+            margin-top: 8px;
+            font-size: 14px;
+            margin-bottom: 4px;
+          }
+          h6{
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            &:last-child{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    &.home{
+      .carousel{
+        position: relative;
+      }
+    }
+    &.single{
+      top: 90px;
+      bottom: 0;
+      .descripcion-oportunidad{
+        width: 100%;
+        left: inherit;
+        margin-left: 0;
+        top: 5px;
+        position: relative;
+        overflow: auto;
+        h2{
+          font-size: 16px;
+        }
+        h1{
+          font-size: 20px;
+        }
+        h3{
+          font-size: 15px;
+          margin-bottom: 20px;
+        }
+        .inversion-estimada{
+          float: none;
+          width: 100%;
+          text-align: left;
+        }
+        .scroll-gallery{
+          margin-top: 20px;
+          max-height: inherit;
+          overflow: auto;
+          figure {
+            max-height: 140px;
+          }
+        }
+      }
+      .descripcion-region{
+        width: 100%;
+        position: relative;
+      }
+      #map{
+        position: relative!important;
+        min-height: 60vh;
+        display: none!important;
+      }
+    }
+    .invierte-turismo-home{
+      zoom: 1;
+      width: 260px;
+      height: 32px;
+    }
+  }
+  footer{
+    padding: 15px 0;
+    display: none;
+    .footer-list{
+      padding: 5px 0 0;
+      text-align: center;
+      width: 100%;
+      position: relative;
+      display: block;
+      margin-bottom: 0;
+      li{
+        display: inline-block;
+        float: none;
+        margin-right: 6px;
+        span{
+          width: 20px;
+          height: 20px;
+          position: relative;
+          top: 5px;
+        }
+        a{
+          font-size: 11px;
+          margin-left: 3px;
+        }
+      }
+    }
+  }
+  .footer-logos{
+    width: 260px;
+    height: 55px;
+    display: block;
+    float: none;
+    margin: 0 auto;
+  }
 }
 
+@media screen and (max-width: 590px) {
+  section{
+    .control-filter{
+      .head-filter{
+        .form-inline{
+          .form-group{
+            width: 100%;
+            margin-bottom: 10px;
+            &:nth-child(1){
+              max-width: 100%;
+              width: 100%;
+            }
+            &:nth-child(2){
+              max-width: 100%;
+              width: 100%;
+            }
+            &:nth-child(3){
+              max-width: 100%;
+              width: 100%;
+            }
+          }
+          .btn-default{
+            display: block;
+            margin: 0 auto;
+            width: 60px;
+            span{
+              display: inline-block;
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 /* ¿QUERIAS RETINA? */
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
 only screen and (-moz-min-device-pixel-ratio: 1.5),
@@ -1027,6 +1443,62 @@ only screen and (min-device-pixel-ratio: 1.5) {
   }
   .ico-twit{
     background: url(../images/ico-twit@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .ico-travel-chile{
+    background: url(../images/ico-travel-chile@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .ico-habitantes{
+    background: url(../images/ico-habitantes@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .ico-superficie{
+    background: url(../images/ico-superficie@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .ico-distancia{
+    background: url(../images/ico-distancia@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .ico-oportunidad{
+    background: url(../images/ico-oportunidad@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .ico-ubicacion{
+    background: url(../images/ico-ubicacion@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .ico-atractivos{
+    background: url(../images/ico-atractivos@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .ico-superficie2{
+    background: url(../images/ico-superficie2@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .ico-modalidad{
+    background: url(../images/ico-modalidad@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .ico-estadisticas{
+    background: url(../images/ico-estadisticas@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .ico-valor-agregado{
+    background: url(../images/ico-valor-agregado@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .ico-acceso1{
+    background: url(../images/ico-acceso1@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .ico-acceso2{
+    background: url(../images/ico-acceso2@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .ico-acceso3{
+    background: url(../images/ico-acceso3@2x.png) no-repeat;
     background-size: contain;
   }
 }
