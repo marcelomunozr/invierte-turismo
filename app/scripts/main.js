@@ -25,11 +25,30 @@ jQuery(function($){
         $(".magnify").data("jfMagnify").update();
     },
     ease: "easeInQuint"
-});
+  });
+
+  $('[data-toggle="tooltip"]').tooltip()
 
   /*FILTRO*/
-  $('.filter-open a').click(function(){
-    $('.control-filter').toggleClass('aparece');
+  $('.filter-open a').click(function(event){
+    event.stopPropagation();
+    $('.control-filter').stop(true, true).toggleClass('aparece');
+    event.preventDefault();
+  });
+
+
+  $('.cerrar-oportunidad').click(function(event){
+    event.stopPropagation();
+    $('.descripcion-oportunidad').stop(true, true).animate({top : '100%'});
+    $('.descripcion-oportunidad').delay(300).slideToggle();//.css({'opacity' : '0'});
+    event.preventDefault();
+  });
+
+  $('.cerrar-region').click(function(event){
+    event.stopPropagation();
+    $('.descripcion-region').stop(true, true).animate({right : '100%'}).css({'left': 'inherit'});
+    $('.descripcion-region').delay(300).slideToggle();//.css({'opacity' : '0'});
+    event.preventDefault();
   });
 
   /* PAGE SCROLL */

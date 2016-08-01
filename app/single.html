@@ -58,6 +58,9 @@
     <section class="single">
       <div id="map"></div>
       <div class="descripcion-oportunidad">
+        <div class="cerrar-oportunidad" data-toggle="tooltip" data-placement="left" title="Cerrar Ficha">
+          <span class="glyphicon glyphicon-remove"></span>
+        </div>
         <div class="row">
           <div class="col-sm-8">
             <h2>Turismo de naturaleza</h2>
@@ -118,7 +121,11 @@
                 <p>Por la ruta K-275 desde Molina hasta el km 55. </p>
               </div>
             </div>
-            <img src="images/mas-info.png" alt="Title" class="img-responsive">
+            <div class="row">
+              <div class="col-sm-9">
+                <img src="images/mas-info.png" alt="Contacto" class="img-responsive">
+              </div>
+            </div>
           </div>
           <div class="col-sm-3">
             <div class="scroll-gallery">
@@ -190,7 +197,7 @@
                 <option>Pesca</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-default">ir <span class="glyphicon glyphicon-menu-right"></span></button>
+            <span class="filter-open"><a class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Cerrar Filtro"><span class="glyphicon glyphicon-remove"></span></a></span>
           </div>
         </div>
         <div class="body-filter">
@@ -532,6 +539,8 @@
     <!-- endbower -->
     <!-- endbuild -->
     <script src="scripts/jquery.easing.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="scripts/jquery.jfMagnify.min.js"></script>
 
     <!-- build:js scripts/plugins.js -->
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
