@@ -16,10 +16,10 @@ jQuery(function($){
   $(".magnify").jfMagnify({
     center: false
   });
-  $('.magnify_glass').animate({
+  $('.magnify_glass').animate(/*{
     'top':'0',
     'left':'16%'
-    },{
+    },*/{
     duration: 400,
     progress: function(){
         $(".magnify").data("jfMagnify").update();
@@ -65,7 +65,7 @@ jQuery(function($){
     $('.navbar-toggle').click() //bootstrap 3.x by Richard
   });
 
-  $(window).load(function() {
+  $(window).on('load', function() {
     /*IGUALAR ALTOS*/
   });
 });

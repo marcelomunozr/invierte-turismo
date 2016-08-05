@@ -324,9 +324,11 @@ section{
           font-family: $lato;
           font-weight: 600;
           border-radius: 19px;
+          text-shadow: none;
           &:hover{
             color: $white;
             text-decoration: none;
+            text-shadow: none;
             opacity: .8;
           }
         }
@@ -436,7 +438,7 @@ section{
         /*/LUPA*/
         .selections{
           position: absolute;
-          left: 27%;
+          margin-left: 27%;
           width: 8%;
           height: 100%;
           top: 0;
@@ -447,7 +449,7 @@ section{
             left: 0;
             display: block;
             float: none;
-            opacity: .5;
+            opacity: 1;
             &.region-1{
               margin-top: 10px;
               left: 30%;
@@ -505,6 +507,9 @@ section{
                 height: 70%;
                 /*background: orange;*/
               }
+              span{
+                top: -10px;
+              }
             }
             &.region-7{
               top: 0;
@@ -521,6 +526,9 @@ section{
               width: 65%;
               height: 2.1%;
               /*background: lightgreen;*/
+              span{
+                top: -4px;
+              }
             }
             &.region-9{
               top: 0;
@@ -553,6 +561,9 @@ section{
               width: 58%;
               height: 2.8%;
               /*background: yellow;*/
+              span{
+                top: -4px;
+              }
             }
             &.region-13{
               top: 0;
@@ -577,8 +588,18 @@ section{
               width: 190%;
               height: 17%;
               /*background: blue;*/
+              span{
+                left: 70%;
+              }
             }
-
+            span{
+              position: absolute;
+              left: 120%;
+              width: 120px;
+              color: $white;
+              font-size: 14px;
+              text-shadow: none;
+            }
           }
         }
       }
@@ -1576,6 +1597,33 @@ footer{
           .selections{
             padding-bottom: 10px;
             width: 7%;
+            a{
+              span{
+                font-size: 10px;
+                left: 150%;
+                top: 2px;
+              }
+              &.region-6{
+                span{
+                  top: -2px;
+                }
+              }
+              &.region-8{
+                span{
+                  top: 2px;
+                }
+              }
+              &.region-9{
+                span{
+                  top: 4px;
+                }
+              }
+              &.region-12{
+                span{
+                  top: 2px;
+                }
+              }
+            }
           }
           .element_to_magnify{
             &.magnified_element{
@@ -1674,6 +1722,17 @@ footer{
           }
           h6{
             margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    &.home{
+      .contenedor{
+        .map-lupita{
+          .element_to_magnify{
+            img{
+              max-width: inherit;
+            }
           }
         }
       }
@@ -1777,9 +1836,9 @@ footer{
             margin-top: 0;
             margin-bottom: 0;
             font-size: 12px;
-            &:last-child{
+            /*&:last-child{
               display: none;
-            }
+            }*/
           }
         }
       }
@@ -1950,6 +2009,30 @@ footer{
               display: inline-block;
               font-size: 10px;
             }
+          }
+        }
+      }
+    }
+  }
+}
+/*HEIGHT*/
+@media screen and(min-height: 800px) and (max-width: 1280px) {
+  section{
+    &.home{
+      .contenedor{
+        .map-lupita{
+          .selections{
+            padding-top: 10px;
+            margin-left: 13%;
+            padding-top: 5px;
+            a{
+              span{
+                font-size: 14px;
+              }
+            }
+          }
+          .img-mapi{
+            margin-left: -14%;
           }
         }
       }
