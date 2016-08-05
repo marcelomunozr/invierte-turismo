@@ -1095,10 +1095,13 @@ section{
   }
 }
 body.customize-support section,
-body.customize-support section.single{
+body.customize-support section.single,
+body.admin-bar section,
+body.admin-bar section.single{
   top: 137px;
 }
-body.customize-support section.home.about{
+body.customize-support section.home.about,
+body.admin-bar section.home.about{
   top: 0;
 }
 /*MAP OPTIONS WN*/
