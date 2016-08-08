@@ -1469,16 +1469,16 @@ footer{
   width: 253px;
   height: 65px;
   display: inline-block;
-  background: url(../images/logo.png) no-repeat;
-  background-size: 100%;
+  /*background: url(../images/logo.png) no-repeat;
+  background-size: 100%;*/
 }
 .invierte-turismo-home{
   width: 640px;
   height: 79px;
   display: block;
   margin: 0 auto;
-  background: url(../images/invierte-turismo.png) no-repeat;
-  background-size: 100%;
+  /*background: url(../images/invierte-turismo.png) no-repeat;
+  background-size: 100%;*/
 }
 .map-mundo{
   width: 371px;
@@ -2122,14 +2122,14 @@ only screen and (min-device-pixel-ratio: 1.5) {
     background: url(../images/flag-england@2x.png) no-repeat;
     background-size: contain;
   }
-  .logo{
+/*  .logo{
     background: url(../images/logo@2x.png) no-repeat;
     background-size: contain;
-  }
-  .invierte-turismo-home{
+  }*/
+/*  .invierte-turismo-home{
     background: url(../images/invierte-turismo@2x.png) no-repeat;
     background-size: contain;
-  }
+  }*/
   .map-mundo{
     background: url(../images/map-mundo2x.png) no-repeat;
     background-size: contain;
