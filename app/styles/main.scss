@@ -141,6 +141,9 @@ a, .btn, textarea:focus, input[type="text"]:focus, input[type="password"]:focus,
     clear: both;
     padding: 40px 0;
 }
+.padl0{
+  padding-left: 0;
+}
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -333,6 +336,25 @@ section{
           }
         }
       }
+      .autor{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        display: block;
+        z-index: 100;
+        height: auto;
+        h6{
+          color: $white;
+          font-family: $gob1;
+          font-size: 14px;
+          span{
+            margin-right: 10px;
+            font-size: 18px;
+            position: relative;
+            top: 4px;
+          }
+        }
+      }
       .col-sm-7,
       .col-sm-5{
         position: relative;
@@ -403,7 +425,7 @@ section{
           cursor: move;
           background: #4a3f68;
           border-radius: 50%;
-          border: 4px solid #6a4d8e;
+          border: 4px solid #ead200;/*6a4d8e*/
         }
         .mg_ring {
           pointer-events: none;
@@ -438,7 +460,7 @@ section{
         /*/LUPA*/
         .selections{
           position: absolute;
-          margin-left: 27%;
+          margin-left: 17%;
           width: 8%;
           height: 100%;
           top: 0;
@@ -800,7 +822,7 @@ section{
         line-height: 19px;
       }
       .line-area{
-        width: 86%;
+        width: 84%;
         display: block;
         margin: 15px auto;
         position: relative;
@@ -840,6 +862,21 @@ section{
         margin-top: 15px;
         .carousel-indicators{
           bottom: 0;
+        }
+        .photo{
+          position: absolute;
+          bottom: 8px;
+          left: 11px;
+          z-index: 5;
+          color: $white;
+          font-family: $gob1;
+          font-size: 14px;
+          span{
+            margin-right: 7px;
+            font-size: 18px;
+            position: relative;
+            top: 4px;
+          }
         }
       }
     }
@@ -970,10 +1007,11 @@ section{
         padding: 10px 15px;
         text-align: center;
         color: $white;
-        font-size: 13px;
-        font-family: $normal;
+        font-size: 15px;
+        font-family: $semi;
         display: inline-block;
         float: right;
+        margin-left: -20px;
         span{
           margin-left: 5px;
         }
@@ -984,9 +1022,25 @@ section{
         overflow-y: scroll;
         margin-top: 15px;
         figure{
-          max-height: 150px;
+          max-height: 180px;
           overflow: hidden;
           margin-bottom: 10px;
+          position: relative;
+          .photo{
+            position: absolute;
+            bottom: 8px;
+            left: 11px;
+            z-index: 5;
+            color: $white;
+            font-family: $gob1;
+            font-size: 14px;
+            span{
+              margin-right: 7px;
+              font-size: 18px;
+              position: relative;
+              top: 4px;
+            }
+          }
         }
       }
     }
@@ -1306,6 +1360,30 @@ body.admin-bar section.home.about{
     }
   }
 }
+.solapa-region{
+  position: absolute;
+  right: 100%;
+  z-index: 1000;
+  background: $purple1;
+  padding: 10px 10px 7px;
+  color: $white;
+  cursor: pointer;
+  span{
+    font-size: 22px;
+  }
+}
+.solapa-oportunidad{
+  position: absolute;
+  right: 100%;
+  z-index: 1000;
+  background: $purple1;
+  padding: 10px 10px 7px;
+  color: $white;
+  cursor: pointer;
+  span{
+    font-size: 22px;
+  }
+}
 
 
 footer{
@@ -1313,7 +1391,7 @@ footer{
   bottom: 0;
   width: 100%;
   background: $gray0;
-  padding: 10px 0;
+  padding: 7px 0 0px;
   z-index: 100;
   &.about{
     position: relative;
@@ -1327,7 +1405,7 @@ footer{
     }
   }
   .footer-logos{
-    zoom: .75;
+    zoom: 1;
   }
   .footer-list{
     list-style: none;
@@ -1630,6 +1708,9 @@ footer{
               margin-top: -28%;
               padding-bottom: 10px;
             }
+            img{
+              max-width: inherit;
+            }
           }
           .magnify_glass {
             width: 100px;
@@ -1673,7 +1754,7 @@ footer{
         .line-area{
           padding: 7px 7px 7px 30px;
           h6{
-            font-size: 15px;
+            font-size: 14px;
             span{
               zoom: .8;
             }
@@ -1722,17 +1803,6 @@ footer{
           }
           h6{
             margin-bottom: 10px;
-          }
-        }
-      }
-    }
-    &.home{
-      .contenedor{
-        .map-lupita{
-          .element_to_magnify{
-            img{
-              max-width: inherit;
-            }
           }
         }
       }
@@ -2023,7 +2093,7 @@ footer{
         .map-lupita{
           .selections{
             padding-top: 10px;
-            margin-left: 13%;
+            margin-left: 14%;
             padding-top: 5px;
             a{
               span{
@@ -2032,7 +2102,7 @@ footer{
             }
           }
           .img-mapi{
-            margin-left: -14%;
+            margin-left: -3%;
           }
         }
       }

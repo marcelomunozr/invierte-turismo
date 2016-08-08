@@ -12,6 +12,10 @@
 
 jQuery(function($){
 
+  /*CAROUSEL HOMI*/
+  $('#carousel-homi').on('slide.bs.carousel', function () {
+    console.log('pudrete');
+  })
   /*LUPITA QUIERE*/
   $(".magnify").jfMagnify({
     center: false
@@ -40,14 +44,28 @@ jQuery(function($){
   $('.cerrar-oportunidad').click(function(event){
     event.stopPropagation();
     $('.descripcion-oportunidad').stop(true, true).animate({top : '100%'});
-    $('.descripcion-oportunidad').delay(300).slideToggle();//.css({'opacity' : '0'});
+    $('.solapa-oportunidad').stop(true, true).animate({left : '0%'},200).css({'right': 'inherit'});
     event.preventDefault();
   });
 
   $('.cerrar-region').click(function(event){
     event.stopPropagation();
     $('.descripcion-region').stop(true, true).animate({right : '100%'}).css({'left': 'inherit'});
-    $('.descripcion-region').delay(300).slideToggle();//.css({'opacity' : '0'});
+    $('.solapa-region').stop(true, true).animate({left : '0%'},200).css({'right': 'inherit'});
+    event.preventDefault();
+  });
+
+  /*SOLAPA*/
+  $('.solapa-region').click(function(event){
+    event.stopPropagation();
+    $('.descripcion-region').stop(true, true).animate({left : '0%'}).css({'right' : 'inherit'});
+    $(this).stop(true, true).animate({right : '100%'},200).css({'left': 'inherit'});
+    event.preventDefault();
+  });
+  $('.solapa-oportunidad').click(function(event){
+    event.stopPropagation();
+    $('.descripcion-oportunidad').stop(true, true).animate({top : '15'});
+    $(this).stop(true, true).animate({right : '100%'},200).css({'left': 'inherit'});
     event.preventDefault();
   });
 
@@ -61,9 +79,10 @@ jQuery(function($){
     return false;
   });
   $('.filter-go a').on('click', function(){
-    $('.btn-navbar').click(); //bootstrap 2.x
-    $('.navbar-toggle').click() //bootstrap 3.x by Richard
+    $('.btn-navbar').click();
+    $('.navbar-toggle').click();
   });
+
 
   $(window).on('load', function() {
     /*IGUALAR ALTOS*/
