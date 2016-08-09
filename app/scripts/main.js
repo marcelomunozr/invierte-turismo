@@ -13,9 +13,15 @@
 jQuery(function($){
 
   /*CAROUSEL HOMI*/
-  $('#carousel-homi').on('slide.bs.carousel', function () {
-    console.log('pudrete');
-  })
+  $('.carousel-author').html('<span class="glyphicon glyphicon-camera"></span> '+ $('#carousel-homi').find(".item.active").data('author'));
+
+  $("#carousel-homi").on("slid.bs.carousel",function(){
+    var carouselData = $(this).data('bs.carousel');
+    var active = carouselData.$element.find('.item.active');
+    $('.carousel-author').html('<span class="glyphicon glyphicon-camera"></span> '+ active.data('author'));
+  });
+
+
   /*LUPITA QUIERE*/
   $(".magnify").jfMagnify({
     center: false
@@ -88,4 +94,3 @@ jQuery(function($){
     /*IGUALAR ALTOS*/
   });
 });
-
