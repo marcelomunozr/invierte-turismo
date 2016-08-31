@@ -363,7 +363,7 @@ section{
       .bg-map{
         overflow: hidden;
         height: 100%;
-        background: url(../images/home-bg-map.png) no-repeat left bottom;
+        padding-right: 0;
         .map-mundo{
           h6{
             font-size: 15px;
@@ -2202,4 +2202,67 @@ only screen and (min-device-pixel-ratio: 1.5) {
     background: url(../images/ico-acceso3@2x.png) no-repeat;
     background-size: contain;
   }
+}
+
+.themap-wrapper{
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  opacity: 1;
+  background: url(../images/home-bg-map.png) no-repeat left bottom;
+  background-size: cover;
+}
+
+.themap{
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  opacity: 1;
+  float: left;
+}
+
+.region-link{
+  a{
+    color: white;
+    position: relative;
+    left: 130px;
+    top: -10px;
+    font-family: "gobCL-Light", "open_sanslight", Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px 1px #000;
+    font-size: 12px;
+  }
+}
+
+.leaflet-container {
+  background-color:rgba(255,0,0,0.0);
+}
+.leaflet-google-layer{
+  opacity: 0.85;
+}
+.leaflet-magnifying-glass {
+  border-radius: 50%;
+  border: 1px solid gray;
+  box-shadow: 0 0 5px gray;
+  position: absolute;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 4px solid #ead200;
+  background: rgba(97, 71, 118, .8);
+  min-height: 200px;
+  .leaflet-container{
+    min-height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
+
+.leaflet-magnifying-glass > .leaflet-container {
+  height: 	100%;
+  width: 	100%;
+}
+
+.leaflet-magnifying-glass-webkit {
+  border-radius: 50%;
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 }
